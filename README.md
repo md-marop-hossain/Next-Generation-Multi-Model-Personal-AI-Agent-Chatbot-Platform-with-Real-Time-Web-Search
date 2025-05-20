@@ -78,5 +78,90 @@ A **production-ready, modular AI chatbot** that leverages state-of-the-art langu
 ## Setup Guide
 
 ### 1. Clone the Repository
+```
 git clone <your-repo-url>
 cd <your-repo-directory>
+```
+
+### 2. Set Up API Keys and Environment Variables
+
+Create a `.env` file in the project root:
+
+```
+OPENAI_API_KEY=your-openai-key
+GROQ_API_KEY=your-groq-key
+TAVILY_API_KEY=your-tavily-key
+```
+
+### 3. Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+### 4. Run the Backend (FastAPI)
+
+Start the FastAPI server (default port: 9999):
+```
+uvicorn backend:app --reload --port 9999
+```
+
+- Access the API docs at: `http://localhost:9999/docs`
+
+### 5. Run the Frontend (Streamlit)
+
+In a new terminal, launch the Streamlit UI:
+```
+streamlit run frontend.py
+```
+- Open the provided local URL in your browser.
+
+---
+
+## Usage
+
+1. **Open the Streamlit UI** in your browser.
+2. **Configure the chatbot:**
+   - Select LLM provider (OpenAI/Groq).
+   - Choose a specific model (e.g., GPT-4o, Llama 3).
+   - Enter a system prompt to define the agent’s behavior (optional).
+   - Enable or disable web search augmentation.
+   - Enter your query/message.
+3. **Submit your query** and view the AI’s response.
+4. **Review conversation history** and iterate as needed.
+
+---
+
+## Configuration
+
+- **Models:** Choose from available LLMs (OpenAI, Groq, Meta Llama, Mistral).
+- **Web Search:** Toggle web search augmentation for up-to-date responses.
+- **System Prompt:** Customize the chatbot’s persona and expertise.
+
+---
+
+## Troubleshooting
+
+- **API Key Errors:** Ensure all required API keys are set in your `.env` file.
+- **Dependency Issues:** Reinstall dependencies and check Python version compatibility.
+- **Connection Issues:** Confirm backend is running before launching the frontend.
+
+---
+
+## Contributing
+
+Contributions are welcome! Please fork the repository, create a feature branch, and submit a pull request with a clear description.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+**Build your own intelligent, web-augmented AI chatbot today—customizable, extensible, and ready for production!**
+
+
+
+
